@@ -1,0 +1,85 @@
+### Health Check
+GET http://localhost:8000/api/health
+
+###
+
+### Root
+GET http://localhost:8000/
+
+###
+
+### Get All Patients
+GET http://localhost:8000/api/patients
+
+###
+
+### Get All Prompts
+GET http://localhost:8000/api/prompts
+
+###
+
+### Get Demo Scenarios
+GET http://localhost:8000/api/scenarios
+
+###
+
+### Submit Scenario A (Should Approve)
+POST http://localhost:8000/api/submit-request
+Content-Type: application/json
+
+{
+  "patient_id": "P001",
+  "drug_requested": "Ozempic",
+  "diagnosis_code": "E11.9",
+  "requesting_doctor": "Dr. Mehta"
+}
+
+###
+
+### Submit Scenario B (Should Deny)
+POST http://localhost:8000/api/submit-request
+Content-Type: application/json
+
+{
+  "patient_id": "P005",
+  "drug_requested": "Ozempic",
+  "diagnosis_code": "E11.9",
+  "requesting_doctor": "Dr. Singh"
+}
+
+###
+
+### Submit Scenario C (Critic Override)
+POST http://localhost:8000/api/submit-request
+Content-Type: application/json
+
+{
+  "patient_id": "P010",
+  "drug_requested": "Ozempic",
+  "diagnosis_code": "E11.65",
+  "requesting_doctor": "Dr. Sharma"
+}
+
+###
+
+### Submit Invalid Patient
+POST http://localhost:8000/api/submit-request
+Content-Type: application/json
+
+{
+  "patient_id": "P999",
+  "drug_requested": "Ozempic",
+  "diagnosis_code": "E11.9",
+  "requesting_doctor": "Dr. Test"
+}
+
+###
+
+### Update a Prompt (Prompt Studio test)
+PUT http://localhost:8000/api/prompts/critic_agent
+Content-Type: application/json
+
+{
+  "agent": "critic_agent",
+  "system_prompt": "You are a VERY strict adversarial critic. Find every possible flaw. Be aggressive in your review. Return only valid JSON as specified."
+}

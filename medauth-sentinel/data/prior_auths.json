@@ -1,0 +1,152 @@
+[
+  {
+    "auth_id": "AUTH-001",
+    "patient_id": "P001",
+    "drug_requested": "Ozempic",
+    "requesting_doctor": "Dr. Mehta",
+    "payer": "BlueCross",
+    "decision": "APPROVED",
+    "reasoning": "Patient P001 has T2DM (E11.9) and active Metformin. All criteria met.",
+    "date": "2023-01-15"
+  },
+  {
+    "auth_id": "AUTH-002",
+    "patient_id": "P001",
+    "drug_requested": "Ozempic",
+    "requesting_doctor": "Dr. Mehta",
+    "payer": "BlueCross",
+    "decision": "DENIED",
+    "reasoning": "Patient P001 now on Insulin Glargine which is contraindicated with Ozempic per POL-001. Previous approval revoked.",
+    "date": "2024-02-10"
+  },
+  {
+    "auth_id": "AUTH-003",
+    "patient_id": "P002",
+    "drug_requested": "Ozempic",
+    "requesting_doctor": "Dr. Singh",
+    "payer": "Aetna",
+    "decision": "DENIED",
+    "reasoning": "Patient has Saxagliptin active — contraindicated with Ozempic per Aetna POL-002.",
+    "date": "2024-03-20"
+  },
+  {
+    "auth_id": "AUTH-004",
+    "patient_id": "P003",
+    "drug_requested": "Humira",
+    "requesting_doctor": "Dr. Sharma",
+    "payer": "UnitedHealth",
+    "decision": "DENIED",
+    "reasoning": "Patient has active Prednisone which is contraindicated with Humira per POL-003.",
+    "date": "2024-01-08"
+  },
+  {
+    "auth_id": "AUTH-005",
+    "patient_id": "P003",
+    "drug_requested": "Humira",
+    "requesting_doctor": "Dr. Sharma",
+    "payer": "UnitedHealth",
+    "decision": "APPROVED",
+    "reasoning": "Prior Ibuprofen trial confirmed (discontinued). Prednisone stopped. Low back pain confirmed. All criteria now met.",
+    "date": "2024-06-15"
+  },
+  {
+    "auth_id": "AUTH-006",
+    "patient_id": "P004",
+    "drug_requested": "Jardiance",
+    "requesting_doctor": "Dr. Patel",
+    "payer": "Cigna",
+    "decision": "DENIED",
+    "reasoning": "Patient age 75 exceeds maximum age of 70 for Jardiance per POL-005. Also has Furosemide contraindication.",
+    "date": "2024-04-12"
+  },
+  {
+    "auth_id": "AUTH-007",
+    "patient_id": "P005",
+    "drug_requested": "Ozempic",
+    "requesting_doctor": "Dr. Nair",
+    "payer": "BlueCross",
+    "decision": "DENIED",
+    "reasoning": "Patient P005 has T2DM but no Metformin in medication history. Policy POL-001 requires prior Metformin trial.",
+    "date": "2024-02-20"
+  },
+  {
+    "auth_id": "AUTH-008",
+    "patient_id": "P006",
+    "drug_requested": "Ozempic",
+    "requesting_doctor": "Dr. Iyer",
+    "payer": "Aetna",
+    "decision": "DENIED",
+    "reasoning": "Patient age 17 — below minimum age of 18 required by POL-002. Request rejected at intake.",
+    "date": "2024-05-01"
+  },
+  {
+    "auth_id": "AUTH-009",
+    "patient_id": "P007",
+    "drug_requested": "Ozempic",
+    "requesting_doctor": "Dr. Reddy",
+    "payer": "UnitedHealth",
+    "decision": "APPROVED",
+    "reasoning": "Patient has E11.65 which is accepted under POL-007 as a T2DM variant. Active Metformin confirmed. Age 43 within range. No contraindications.",
+    "date": "2024-06-10"
+  },
+  {
+    "auth_id": "AUTH-010",
+    "patient_id": "P008",
+    "drug_requested": "Lipitor",
+    "requesting_doctor": "Dr. Gupta",
+    "payer": "Cigna",
+    "decision": "DENIED",
+    "reasoning": "Patient has active Gemfibrozil — contraindicated with Lipitor per POL-006. High risk of myopathy.",
+    "date": "2024-03-18"
+  },
+  {
+    "auth_id": "AUTH-011",
+    "patient_id": "P010",
+    "drug_requested": "Keytruda",
+    "requesting_doctor": "Dr. Sharma",
+    "payer": "Aetna",
+    "decision": "DENIED",
+    "reasoning": "Patient has active Prednisone (corticosteroid) — contraindicated with Keytruda per POL-010. Immunotherapy efficacy severely reduced.",
+    "date": "2024-11-05"
+  },
+  {
+    "auth_id": "AUTH-012",
+    "patient_id": "P014",
+    "drug_requested": "Keytruda",
+    "requesting_doctor": "Dr. Desai",
+    "payer": "Aetna",
+    "decision": "DENIED",
+    "reasoning": "Patient has active Prednisone contraindicated with Keytruda. Despite prior Carboplatin failure confirmed, contraindication blocks approval.",
+    "date": "2024-05-20"
+  },
+  {
+    "auth_id": "AUTH-013",
+    "patient_id": "P016",
+    "drug_requested": "Ozempic",
+    "requesting_doctor": "Dr. Bhat",
+    "payer": "Cigna",
+    "decision": "DENIED",
+    "reasoning": "Patient age 75 exceeds Cigna POL-008 maximum age of 72 for Ozempic.",
+    "date": "2024-07-30"
+  },
+  {
+    "auth_id": "AUTH-014",
+    "patient_id": "P017",
+    "drug_requested": "Ozempic",
+    "requesting_doctor": "Dr. Reddy",
+    "payer": "BlueCross",
+    "decision": "DENIED",
+    "reasoning": "Patient has active Insulin Glargine — contraindicated with Ozempic per POL-001. Previous Metformin history does not override contraindication.",
+    "date": "2024-08-14"
+  },
+  {
+    "auth_id": "AUTH-015",
+    "patient_id": "P018",
+    "drug_requested": "Keytruda",
+    "requesting_doctor": "Dr. Agarwal",
+    "payer": "Aetna",
+    "decision": "PENDING",
+    "reasoning": "Patient has active Carboplatin — reviewing if current use satisfies prior drug failure requirement or if it is still first-line treatment.",
+    "date": "2024-12-01"
+  }
+]

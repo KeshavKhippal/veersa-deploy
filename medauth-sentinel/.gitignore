@@ -1,0 +1,41 @@
+# Environment — NEVER commit real keys
+.env
+*.env
+.env.local
+.env.production.local
+.env.development.local
+.env.test.local
+
+# Secrets — explicit protection
+GROQ_API_KEY
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.coverage
+dist/
+build/
+*.egg-info/
+
+# Node
+node_modules/
+frontend/build/
+frontend/dist/
+npm-debug.log*
+.next/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# Docker
+*.log
+sandbox/
+frontend/node_modules/

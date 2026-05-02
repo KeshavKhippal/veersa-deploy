@@ -1,0 +1,112 @@
+[
+  {
+    "policy_id": "POL-001",
+    "payer": "BlueCross",
+    "drug_name": "Ozempic",
+    "requires_diagnosis": "E11.9",
+    "requires_prior_drug_failure": "Metformin",
+    "min_age": 18,
+    "max_age": 75,
+    "contraindicated_with": ["Insulin Glargine"],
+    "notes": "BlueCross requires T2DM (E11.9), prior Metformin failure, age 18-75. Contraindicated with Insulin Glargine."
+  },
+  {
+    "policy_id": "POL-002",
+    "payer": "Aetna",
+    "drug_name": "Ozempic",
+    "requires_diagnosis": "E11.9 OR E11.65",
+    "requires_prior_drug_failure": "Metformin",
+    "min_age": 18,
+    "max_age": 70,
+    "contraindicated_with": ["Saxagliptin"],
+    "notes": "Aetna accepts E11.9 and E11.65. Requires Metformin trial. Age 18-70 only. Contraindicated with Saxagliptin."
+  },
+  {
+    "policy_id": "POL-003",
+    "payer": "UnitedHealth",
+    "drug_name": "Humira",
+    "requires_diagnosis": "M54.5",
+    "requires_prior_drug_failure": "Ibuprofen",
+    "min_age": 18,
+    "max_age": null,
+    "contraindicated_with": ["Methotrexate", "Prednisone"],
+    "notes": "UnitedHealth requires Low Back Pain (M54.5) AND prior Ibuprofen failure. Contraindicated with Methotrexate or Prednisone."
+  },
+  {
+    "policy_id": "POL-004",
+    "payer": "Cigna",
+    "drug_name": "Advair",
+    "requires_diagnosis": "J45.909",
+    "requires_prior_drug_failure": "Albuterol",
+    "min_age": 12,
+    "max_age": null,
+    "contraindicated_with": [],
+    "notes": "Cigna requires Asthma (J45.909) AND prior Albuterol failure before Advair. Min age 12."
+  },
+  {
+    "policy_id": "POL-005",
+    "payer": "BlueCross",
+    "drug_name": "Jardiance",
+    "requires_diagnosis": "E11.9",
+    "requires_prior_drug_failure": "Metformin",
+    "min_age": 18,
+    "max_age": 70,
+    "contraindicated_with": ["Furosemide"],
+    "notes": "BlueCross requires T2DM and Metformin trial for Jardiance. Max age 70. Contraindicated with Furosemide."
+  },
+  {
+    "policy_id": "POL-006",
+    "payer": "Aetna",
+    "drug_name": "Lipitor",
+    "requires_diagnosis": "E78.5",
+    "requires_prior_drug_failure": null,
+    "min_age": 18,
+    "max_age": null,
+    "contraindicated_with": ["Gemfibrozil"],
+    "notes": "Aetna requires Hyperlipidemia (E78.5) for Lipitor. Contraindicated with Gemfibrozil."
+  },
+  {
+    "policy_id": "POL-007",
+    "payer": "UnitedHealth",
+    "drug_name": "Ozempic",
+    "requires_diagnosis": "E11.9 OR E11.65",
+    "requires_prior_drug_failure": "Metformin",
+    "min_age": 18,
+    "max_age": 75,
+    "contraindicated_with": ["Insulin Glargine", "Saxagliptin"],
+    "notes": "UnitedHealth accepts E11.9 and E11.65. Requires Metformin. Age 18-75. Contraindicated with Insulin Glargine or Saxagliptin."
+  },
+  {
+    "policy_id": "POL-008",
+    "payer": "Cigna",
+    "drug_name": "Ozempic",
+    "requires_diagnosis": "E11.9",
+    "requires_prior_drug_failure": "Metformin",
+    "min_age": 18,
+    "max_age": 72,
+    "contraindicated_with": [],
+    "notes": "Cigna requires T2DM (E11.9) AND Metformin trial for Ozempic. Age 18-72."
+  },
+  {
+    "policy_id": "POL-009",
+    "payer": "BlueCross",
+    "drug_name": "Saxenda",
+    "requires_diagnosis": "E66.9",
+    "requires_prior_drug_failure": null,
+    "min_age": 18,
+    "max_age": 65,
+    "contraindicated_with": ["Ozempic", "Wegovy"],
+    "notes": "BlueCross requires Obesity (E66.9) for Saxenda. Max age 65. Cannot be used with other GLP-1 agonists."
+  },
+  {
+    "policy_id": "POL-010",
+    "payer": "Aetna",
+    "drug_name": "Keytruda",
+    "requires_diagnosis": "C34.90",
+    "requires_prior_drug_failure": "Carboplatin",
+    "min_age": 18,
+    "max_age": null,
+    "contraindicated_with": ["Prednisone"],
+    "notes": "Aetna requires Lung Cancer (C34.90) and prior Carboplatin failure for Keytruda. Contraindicated with corticosteroids."
+  }
+]

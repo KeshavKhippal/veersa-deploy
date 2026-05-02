@@ -1,0 +1,22 @@
+[
+  {"patient_id": "P001", "name": "Swati Kulkarni", "age": 65, "gender": "F", "insurance_id": "INS-4257", "payer": "BlueCross", "phone": "9863794026", "city": "Pune"},
+  {"patient_id": "P002", "name": "Deepak Mehta", "age": 47, "gender": "M", "insurance_id": "INS-3547", "payer": "Aetna", "phone": "9351161559", "city": "Hyderabad"},
+  {"patient_id": "P003", "name": "Kavita Malhotra", "age": 32, "gender": "F", "insurance_id": "INS-8527", "payer": "UnitedHealth", "phone": "9816184959", "city": "Chennai"},
+  {"patient_id": "P004", "name": "Suresh Gupta", "age": 75, "gender": "M", "insurance_id": "INS-2139", "payer": "Cigna", "phone": "9034131647", "city": "Pune"},
+  {"patient_id": "P005", "name": "Kiran Nair", "age": 40, "gender": "M", "insurance_id": "INS-7065", "payer": "BlueCross", "phone": "9534192832", "city": "Ahmedabad"},
+  {"patient_id": "P006", "name": "Meera Iyer", "age": 17, "gender": "F", "insurance_id": "INS-5422", "payer": "Aetna", "phone": "9835030564", "city": "Mumbai"},
+  {"patient_id": "P007", "name": "Neha Chatterjee", "age": 43, "gender": "F", "insurance_id": "INS-6155", "payer": "UnitedHealth", "phone": "9376724238", "city": "Jaipur"},
+  {"patient_id": "P008", "name": "Rekha Saxena", "age": 46, "gender": "F", "insurance_id": "INS-8019", "payer": "Cigna", "phone": "9965328710", "city": "Mumbai"},
+  {"patient_id": "P009", "name": "Rahul Joshi", "age": 39, "gender": "M", "insurance_id": "INS-3621", "payer": "BlueCross", "phone": "9691669784", "city": "Jaipur"},
+  {"patient_id": "P010", "name": "Sunita Rao", "age": 30, "gender": "F", "insurance_id": "INS-2876", "payer": "Aetna", "phone": "9845146270", "city": "Hyderabad"},
+  {"patient_id": "P011", "name": "Divya Menon", "age": 62, "gender": "F", "insurance_id": "INS-3927", "payer": "UnitedHealth", "phone": "9814893252", "city": "Jaipur"},
+  {"patient_id": "P012", "name": "Priya Singh", "age": 16, "gender": "F", "insurance_id": "INS-1009", "payer": "Cigna", "phone": "9957015430", "city": "Chennai"},
+  {"patient_id": "P013", "name": "Vikram Patel", "age": 66, "gender": "M", "insurance_id": "INS-2290", "payer": "BlueCross", "phone": "9171822782", "city": "Hyderabad"},
+  {"patient_id": "P014", "name": "Anita Desai", "age": 63, "gender": "F", "insurance_id": "INS-7932", "payer": "Aetna", "phone": "9383465787", "city": "Mumbai"},
+  {"patient_id": "P015", "name": "Rajesh Kumar", "age": 45, "gender": "M", "insurance_id": "INS-4681", "payer": "UnitedHealth", "phone": "9150983930", "city": "Mumbai"},
+  {"patient_id": "P016", "name": "Pooja Bhat", "age": 75, "gender": "F", "insurance_id": "INS-1964", "payer": "Cigna", "phone": "9310518347", "city": "Chennai"},
+  {"patient_id": "P017", "name": "Sanjay Reddy", "age": 64, "gender": "M", "insurance_id": "INS-3167", "payer": "BlueCross", "phone": "9997376311", "city": "Kolkata"},
+  {"patient_id": "P018", "name": "Manish Agarwal", "age": 52, "gender": "M", "insurance_id": "INS-7939", "payer": "Aetna", "phone": "9670106513", "city": "Chennai"},
+  {"patient_id": "P019", "name": "Arjun Sharma", "age": 42, "gender": "M", "insurance_id": "INS-9786", "payer": "UnitedHealth", "phone": "9726247317", "city": "Jaipur"},
+  {"patient_id": "P020", "name": "Amit Verma", "age": 36, "gender": "M", "insurance_id": "INS-1828", "payer": "Cigna", "phone": "9801326773", "city": "Kolkata"}
+]
