@@ -1,0 +1,15 @@
+# Build plan — not for public repo
+medauth_sentinel_build_plan.md
+
+# Environment files
+.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+dist/
+.next/
