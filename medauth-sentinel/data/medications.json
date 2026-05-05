@@ -1,7 +1,18 @@
 [
-  {"patient_id": "P001", "drug_name": "Metformin", "dosage": "500mg", "started_date": "2021-09-11", "status": "active"},
-  {"patient_id": "P001", "drug_name": "Insulin Glargine", "dosage": "10 units", "started_date": "2023-06-01", "status": "active"},
-  {"patient_id": "P002", "drug_name": "Metformin", "dosage": "1000mg", "started_date": "2021-08-15", "status": "active"},
+  {
+    "patient_id": "P001",
+    "drug_name": "Metformin",
+    "dosage": "500mg",
+    "started_date": "2021-09-11",
+    "status": "active"
+  },
+  {
+    "patient_id": "P002",
+    "drug_name": "Metformin",
+    "dosage": "1000mg",
+    "started_date": "2021-08-15",
+    "status": "active"
+  },
   {"patient_id": "P002", "drug_name": "Saxagliptin", "dosage": "5mg", "started_date": "2023-01-10", "status": "active"},
   {"patient_id": "P002", "drug_name": "Atorvastatin", "dosage": "40mg", "started_date": "2022-04-20", "status": "active"},
   {"patient_id": "P003", "drug_name": "Ibuprofen", "dosage": "400mg", "started_date": "2022-11-01", "status": "discontinued"},

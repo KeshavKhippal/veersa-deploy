@@ -4,6 +4,7 @@ Wraps the orchestrator and exposes it as a REST API.
 Run: uvicorn backend.main:app --reload
 """
 
+from typing import Optional
 import json
 import os
 import subprocess
@@ -12,8 +13,35 @@ import yaml
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.models import PARequest, PromptUpdate
+from backend.models import PARequest, PromptUpdate, Clinician, Notification
 from backend.orchestrator import run_prior_auth
+
+# Mock data for demonstration
+MOCK_CLINICIAN = {
+    "id": "DR001",
+    "name": "Dr. Jameson",
+    "role": "Chief Medical Officer",
+    "avatar_color": "med-primary"
+}
+
+MOCK_NOTIFICATIONS = [
+    {
+        "id": "NOTIF001",
+        "title": "Auth Decision",
+        "message": "Case P001 Approved for Ozempic",
+        "type": "success",
+        "timestamp": "10:45 AM",
+        "read": False
+    },
+    {
+        "id": "NOTIF002",
+        "title": "Policy Update",
+        "message": "New prior-auth rules for GLP-1 agonists",
+        "type": "info",
+        "timestamp": "Yesterday",
+        "read": True
+    }
+]
 
 # Base paths
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -51,12 +79,12 @@ async def lifespan(app: FastAPI):
                 text=True
             )
             print("[STARTUP] Data generation output:", result.stdout)
-            print("[STARTUP] ✅ All data files generated successfully")
+            print("[STARTUP] [OK] All data files generated successfully")
         except subprocess.CalledProcessError as e:
-            print(f"[STARTUP] ⚠️  Data generation failed: {e}")
+            print(f"[STARTUP] [ERROR] Data generation failed: {e}")
             print(f"[STARTUP] stderr: {e.stderr}")
     else:
-        print(f"[STARTUP] ✅ All {len(data_files)} data files present")
+        print(f"[STARTUP] [OK] All {len(data_files)} data files present")
 
     yield  # Server runs here
 
@@ -203,3 +231,16 @@ def get_scenarios():
             }
         }
     ]
+
+
+# ---- Endpoint 8: Get Current Clinician ----
+@app.get("/api/user", response_model=Clinician)
+def get_current_user():
+    return MOCK_CLINICIAN
+
+
+# ---- Endpoint 9: Get Notifications ----
+@app.get("/api/notifications", response_model=list[Notification])
+def get_notifications():
+    return MOCK_NOTIFICATIONS
+

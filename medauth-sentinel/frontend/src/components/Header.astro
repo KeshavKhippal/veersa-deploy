@@ -1,0 +1,38 @@
+---
+import ClinicianProfile from './ClinicianProfile.jsx';
+import Notifications from './Notifications.jsx';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<header class="h-20 bg-white/80 backdrop-blur-xl border-b border-med-border flex items-center justify-between px-10 z-20 sticky top-0 shadow-[0_2px_15px_rgba(0,0,0,0.02)]">
+  <div class="flex items-center gap-8">
+    <div class="h-8 w-[1px] bg-med-border" />
+    <div class="flex flex-col">
+      <span class="text-[10px] font-bold text-med-primary uppercase tracking-[0.2em] mb-0.5">Clinical Workspace</span>
+      <h2 class="text-xl font-bold text-med-text tracking-tight">{title}</h2>
+    </div>
+  </div>
+
+  <div class="flex items-center gap-6">
+    <div class="flex items-center gap-4 px-4 py-2 bg-med-bg border border-med-border rounded-xl">
+      <div class="flex items-center gap-2">
+        <div class="w-2 h-2 rounded-full bg-status-success shadow-[0_0_8px_rgba(16,185,129,0.4)]"></div>
+        <span class="text-[11px] font-bold text-med-secondary tracking-wide">SECURE_ACTIVE</span>
+      </div>
+      <div class="w-[1px] h-3 bg-med-border"></div>
+      <span class="text-[11px] font-medium text-med-text-muted">HIPAA Level 4</span>
+    </div>
+
+    <div class="h-10 w-[1px] bg-med-border" />
+
+    <div class="flex items-center gap-3">
+        <Notifications client:load />
+        <ClinicianProfile client:load />
+    </div>
+  </div>
+</header>

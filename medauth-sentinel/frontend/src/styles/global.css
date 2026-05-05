@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --color-med-bg: #f8fafc; /* Slate 50 */
+  --color-med-surface: #ffffff;
+  --color-med-border: #e2e8f0; /* Slate 200 */
+  --color-med-primary: #0d9488; /* Teal 600 */
+  --color-med-primary-muted: #f0fdfa; /* Teal 50 */
+  --color-med-secondary: #334155; /* Slate 700 */
+  --color-med-accent: #3b82f6; /* Blue 500 */
+  
+  --color-med-text: #0f172a; /* Slate 900 */
+  --color-med-text-muted: #64748b; /* Slate 500 */
+  
+  --color-status-success: #10b981; /* Emerald 500 */
+  --color-status-success-bg: #ecfdf5;
+  --color-status-warning: #f59e0b; /* Amber 500 */
+  --color-status-warning-bg: #fffbe6;
+  --color-status-error: #ef4444; /* Red 500 */
+  --color-status-error-bg: #fef2f2;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-med-bg);
+    color: var(--color-med-text);
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    background-image: 
+      radial-gradient(circle at 100% 0%, rgba(13, 148, 136, 0.03) 0%, transparent 40%),
+      radial-gradient(circle at 0% 100%, rgba(59, 130, 246, 0.03) 0%, transparent 40%);
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .med-card {
+    @apply bg-med-surface border border-med-border rounded-2xl overflow-hidden relative transition-all duration-300;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
+  }
+
+  .med-card:hover {
+    @apply border-med-primary/30;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  }
+
+  .med-input {
+    @apply w-full px-4 py-2.5 bg-med-surface border border-med-border rounded-xl text-sm transition-all focus:border-med-primary focus:ring-4 focus:ring-med-primary/5 focus:outline-none placeholder:text-med-text-muted/50;
+  }
+
+  .med-btn-primary {
+    @apply px-6 py-2.5 bg-med-primary text-white font-semibold rounded-xl transition-all hover:bg-med-primary/90 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-med-primary/10;
+  }
+
+  .med-btn-secondary {
+    @apply px-6 py-2.5 bg-med-surface border border-med-border text-med-secondary font-semibold rounded-xl transition-all hover:bg-med-bg hover:border-med-secondary/30 active:scale-[0.98];
+  }
+
+  .med-label {
+    @apply text-[11px] font-bold text-med-text-muted uppercase tracking-wider mb-2 block;
+  }
+
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-md border border-white/40;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+  border: 2px solid var(--color-med-bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Animations */
+@keyframes soft-fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-soft-fade-in {
+  animation: soft-fade-in 0.5s ease-out forwards;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}

@@ -24,3 +24,22 @@ class PromptUpdate(BaseModel):
     """Model for updating agent prompts via Prompt Studio."""
     agent: str = Field(..., description="Agent name: intake_agent, decision_agent, or critic_agent")
     system_prompt: str = Field(..., min_length=10, description="New system prompt content")
+
+
+class Clinician(BaseModel):
+    """Model for clinician profile."""
+    id: str
+    name: str
+    role: str
+    avatar_color: str = "med-primary"
+
+
+class Notification(BaseModel):
+    """Model for system notifications."""
+    id: str
+    title: str
+    message: str
+    type: str  # info, warning, success
+    timestamp: str
+    read: bool = False
+

@@ -1,0 +1,70 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+
+const NAV_ITEMS = [
+  { id: 'submit', label: 'Case Entry', href: '/', icon: 'dashboard', desc: 'Prior Auth' },
+  { id: 'trace', label: 'Analysis', href: '/trace', icon: 'analytics', desc: 'Reasoning' },
+  { id: 'prompts', label: 'Cognition', href: '/prompts', icon: 'psychology', desc: 'AI Control' },
+];
+---
+
+<aside class="w-72 bg-med-surface border-r border-med-border flex flex-col z-30 relative shadow-[10px_0_30px_rgba(0,0,0,0.01)]">
+  <div class="p-8">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl bg-med-primary flex items-center justify-center text-white shadow-lg shadow-med-primary/20">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+      </div>
+      <div>
+        <h1 class="text-lg font-bold text-med-text tracking-tight leading-none">MedAuth</h1>
+        <p class="text-[10px] text-med-primary font-bold mt-1 uppercase tracking-widest">Sentinel CDSS</p>
+      </div>
+    </div>
+  </div>
+
+  <nav class="flex-1 px-4 py-6 space-y-1">
+    {NAV_ITEMS.map((item) => {
+      const isActive = pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href));
+      return (
+        <a
+          href={item.href}
+          class={`group flex items-center gap-4 px-4 py-3.5 rounded-xl transition-all duration-200 ${
+            isActive
+              ? 'bg-med-primary/5 text-med-primary'
+              : 'text-med-text-muted hover:bg-med-bg hover:text-med-text'
+          }`}
+        >
+          <div class={`transition-transform duration-300 ${isActive ? 'scale-110' : 'opacity-60 group-hover:opacity-100'}`}>
+             {item.id === 'submit' && <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>}
+             {item.id === 'trace' && <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>}
+             {item.id === 'prompts' && <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5V3L10 2"/><path d="M10 22v-2l2-1"/><path d="M22 10h-2l-1 2"/><path d="M2 14h2l1-2"/><path d="m16.6 5.4 1.4-1.4L17 3"/><path d="m7.4 18.6-1.4 1.4L7 21"/><path d="m18.6 16.6 1.4 1.4L21 17"/><path d="m5.4 7.4-1.4-1.4L3 7"/><circle cx="12" cy="12" r="3"/></svg>}
+          </div>
+
+          <div class="text-left">
+            <div class="text-[13px] font-bold leading-none mb-0.5">{item.label}</div>
+            <div class="text-[10px] font-medium opacity-60">{item.desc}</div>
+          </div>
+          
+          {isActive && <div class="ml-auto w-1.5 h-1.5 rounded-full bg-med-primary shadow-[0_0_8px_rgba(13,148,136,0.4)]" />}
+        </a>
+      );
+    })}
+  </nav>
+
+  <div class="p-6">
+    <div class="p-4 rounded-2xl bg-med-bg border border-med-border">
+      <div class="flex items-center justify-between mb-3">
+        <span class="text-[9px] font-bold text-med-text-muted uppercase tracking-[0.15em]">Health Core</span>
+        <div class="w-2 h-2 rounded-full bg-status-success animate-pulse"></div>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-white border border-med-border flex items-center justify-center text-med-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+        </div>
+        <div class="text-[11px] font-bold text-med-secondary">
+          SNTL-NODE-01
+          <div class="text-[9px] font-medium text-med-text-muted opacity-70">Clinical Cloud Sync</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
